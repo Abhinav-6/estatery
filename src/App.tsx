@@ -1,12 +1,19 @@
-import { useState } from 'react'
-function App() {
-  
+import "./index.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./page/Home";
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
 
+function App() {
   return (
-    <div className="App">
-      <h1 className='text-3xl text-purple-500 animate-pulse'>Namaste World</h1>
-    </div>
-  )
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
