@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Navlink from "../component/Navlink";
 
 const Navbar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
   return (
-    <nav className="bg-white shadow-sm px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 font-medium">
+    <nav className="bg-white shadow-sm px-2 sm:px-4 py-2.5 md:py-0 fixed w-full z-20 top-0 left-0 border-b border-gray-200 font-medium">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link to="/" className="flex items-center">
           <svg
@@ -62,37 +63,16 @@ const Navbar = () => {
         >
           <ul className="flex w-full flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
             <li>
-              <NavLink
-                to="#"
-                className="block py-2 pl-3 pr-4 text-white bg-blue-700 font-semibold  rounded md:bg-transparent md:text-blue-700 md:p-0 "
-                aria-current="page"
-              >
-                Home
-              </NavLink>
+              <Navlink to="/rent">Rent</Navlink>
             </li>
             <li>
-              <NavLink
-                to="#"
-                className="block py-2 pl-3 pr-4 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 "
-              >
-                About
-              </NavLink>
+              <Navlink to="/buy">Buy</Navlink>
             </li>
             <li>
-              <NavLink
-                to="#"
-                className="block py-2 pl-3 pr-4 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 "
-              >
-                Services
-              </NavLink>
+              <Navlink to="/about">About</Navlink>
             </li>
             <li>
-              <NavLink
-                to="#"
-                className="block py-2 pl-3 pr-4 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 "
-              >
-                Contact
-              </NavLink>
+              <Navlink to="/contact">Contact</Navlink>
             </li>
           </ul>
         </div>
